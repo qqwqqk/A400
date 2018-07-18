@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset = UTF-8">
+    <title>YGBA400</title>
+    <link href="/app/views/style/show.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<header></header>
+<!-- 代码注释 -->
+<content>
+    <form class="form">
+        <fieldset class="add-table">
+            <div class="letter-one">
+                <div class="letter-root-top"><br/>党<br/>员<br/>介<br/>绍<br/>信<br/>存<br/>根<br/></div>
+                <div class="letter-root">
+                    <p class="number-id">第{{info.student_id}}号</p><br/><br/>
+                    <p class="text-content">
+                        <input type="text" name="partyname1" class="input-content-short" placeholder="请输入姓名" value="{{info.partyname}}" readonly>同志，
+                        系中共<input type="text" name="formal1" class="input-content-texts" value="{{info.formals}}" readonly>党员，
+                        组织关系由<input type="text" name="school1" class="input-content-short" value="上海大学" readonly>
+                        转到<input type="text" name="superior1" class="input-content-long" placeholder="请输入转入党委名称" value="{{info.superior}}" readonly>。
+                    </p>
+                    <p class="data-content">
+                        <input type="text" name="data-y1" class="input-content-year" value="{{info.current_date_y}}" readonly>年
+                        <input type="text" name="data-m1" class="input-content-data" value="{{info.current_date_m}}" readonly>月
+                        <input type="text" name="data-d1" class="input-content-data" value="{{info.current_date_d}}" readonly>日
+                    </p>
+                </div>
+                <div class="letter-root-right"><br/>第<br/>一<br/>联<br/></div>
+            </div>
+            <br/>
+            <div class="letter-two">
+                <div class="letter-content">
+                    <p class="number-id">第{{info.student_id}}号</p><br/><br/>
+                    <p class="top-content"><input type="text" name="superior" class="input-content-long" placeholder="请输入转入党委名称" value="{{info.superior}}" readonly></p><br/><br/>
+                    <p class="text-content">
+                        <input type="text" name="partyname" class="input-content-short" placeholder="请输入姓名" value="{{info.partyname}}" readonly>同志
+                        <input type="text" name="sex" class="input-content-text" value="{{info.sex}}" readonly>，
+                        <input type="text" name="age" class="input-content-text" value="{{info.age}}" readonly>岁，
+                        <input type="text" name="nationality" class="input-content-texts" value="{{info.nationality}}" readonly>族，
+                        系中共<input type="text" name="formal2" class="input-content-texts" value="{{info.formals}}" readonly>党员，
+                        身份证号<input type="text" name="card_id" class="input-content" placeholder="请输入身份证号" value="{{info.card_id}}" readonly>，
+                        由<input type="text" name="school" class="input-content-short" value="上海大学" readonly>
+                        去<input type="text" name="base" class="input-content" placeholder="请输入基层党委名称" value="{{info.base}}" readonly>，请接转组织关系，该同志党费已交到
+                        <input type="text" name="data-y" class="input-content-texts" value="{{info.date_y}}" readonly>年
+                        <input type="text" name="data-m" class="input-content-text" value="{{info.date_m}}" readonly>月
+                        （有效期<input type="text" name="data-d" class="input-content-text" value="{{info.date_d}}" readonly>天）
+                    </p>
+                    <p class="data-content">（盖章)<br/>
+                        <input type="text" name="data-y2" class="input-content-year" value="{{info.current_date_y}}" readonly>年
+                        <input type="text" name="data-m2" class="input-content-data" value="{{info.current_date_m}}" readonly>月
+                        <input type="text" name="data-d2" class="input-content-data" value="{{info.current_date_d}}" readonly>日
+                    </p><br/><br/><br/><br/><br/>
+
+                    <div>&nbsp;&nbsp;党员联系电话或其它联系方式：<input type="text" name="telephone" class="input-content" placeholder="请输入联系电话" value="{{info.telephone}}" readonly></div>
+                    <div>&nbsp;&nbsp;党员原所在基层党委通讯地址：<input type="text" name="college" class="input-content" placeholder="请输入学院" value="{{info.college}}" readonly></div>
+                    <div><br/>&nbsp;
+                        联系电话：<span class="const-receipt">021-66132343</span>&nbsp;&nbsp;&nbsp;
+                        传真：<span class="const-receipt">021-66133796</span>&nbsp;&nbsp;&nbsp;
+                        邮编：<span class="const-receipt">200444</span>
+                    </div>
+
+
+                </div>
+                <div class="letter-content-right"><br/>第<br/>二<br/>联<br/></div>
+            </div>
+            <br/>
+            <div class="letter-three">
+                <div class="letter-receipt">
+                    <p class="number-id">第{{info.student_id}}号</p><br/><br/>
+                    <p class="top-content"><input type="text" name="school3" class="input-content" value="上海大学（接收方填写）" readonly></p><br/><br/>
+                    <p class="text-content">
+                        <input type="text" name="partyname3" class="input-content" value="党员姓名(接收方填写)" readonly>同志的党员组织关系已转达我处，特此回复。
+                    </p>
+                    <p class="data-content">（盖章)<br/>
+                        <input type="text" name="data-y3" class="input-content-year" value="{{info.current_date_y}}" readonly>年
+                        <input type="text" name="data-m3" class="input-content-data" value="{{info.current_date_m2}}" readonly>月
+                        <input type="text" name="data-d3" class="input-content-data" value="{{info.current_date_d}}" readonly>日
+                    </p><br/><br/><br/>
+                    <p>&nbsp;&nbsp;经办人：<span class="const-receipt">（接收方填写）</span> &nbsp; 联系电话：<span class="const-receipt">（接收方填写）</span></p>
+                </div>
+                <div class="letter-receipt-right"><br/>第<br/>三<br/>联<br/></div>
+            </div>
+        </fieldset>
+    </form>
+</content>
+<footer></footer>
+</body>
+</html>

@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2018/7/4
- * Time: 13:41
- */
 
 namespace app\model;
 
@@ -20,9 +14,20 @@ class model extends partymodel{
 
     }
 
+    //查询指定数据
+    public function find($columns, $where){
+        return $this->select($this->table, $columns, $where);
+    }
+
     //添加指定数据
-    public function addOne($data){
-        p($data);
+    public function add($data){
+        $where = array("AND" => ["student_id" => $data['student_id'], "id[>]" => 0]);
+        $this->delete($this->table,$where);
         return $this->insert($this->table,$data);
+    }
+
+    //修改指定数据
+    public function save($columns, $where){
+        return $this->update($this->table, $columns, $where);
     }
 }

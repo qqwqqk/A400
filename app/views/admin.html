@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1> admin </h1>
+<input type="hidden" name="id" value="0">
+<table>
+    {% for val in info %}
+    <tr>
+        <td>学号：{{ val.student_id }}</td>
+        <td>姓名：{{ val.partyname }}</td>
+        <td>状态码：{{ val.stream }}</td>
+        <td>日期：{{ val.data }}</td>
+        <td><a class="" href="/show/show/id/{{val.student_id}}" target="_blank">预览</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

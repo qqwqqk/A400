@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<link href="/app/views/style/user.css" rel="stylesheet" type="text/css"/>
+
+<h1>user</h1>
+<form action="/user/revise" method="POST" class="form">
+    <fieldset class="user-table">
+        <legend>{{info.id}}您好！<input type="hidden" name="user_id" value="{{info.id}}" /></legend>
+        <div class="user-div">
+            <label>目前您的党组织转移情况是：</label>
+            <textarea class="stream-show" readonly>{{info.stream}}</textarea>
+        </div>
+        <div class="user-div">
+            <button type="submit" class="user-submit">{{ info.next }}</button>
+        </div>
+    </fieldset>
+</form>
+{% endblock %}

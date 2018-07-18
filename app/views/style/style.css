@@ -1,0 +1,9 @@
+/* 整体框架部分 */
+.header-css{width: 640px; padding: 20px; margin: 10px auto;}
+.test-css{width: 80px; margin-right:20px; color:greenyellow; float: right; text-decoration:none;}
+/* 登录与注册页面 */
+.login-table{width: 400px;padding: 20px;border: 1px solid darkgray;margin: 10px auto;}
+.login-div{width: 240px;height: 24px;padding: 6px;margin: 10px auto;text-align: center;}
+.login-submit{width: 48px;height: 24px;padding: 2px;margin-right: 24px;background-color: azure;float: right;}
+.registration-submit{height: 24px;padding: 2px;margin-right: 24px;background-color: azure;float: right;}
+.error-info{color:red;}

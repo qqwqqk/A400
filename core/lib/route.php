@@ -39,6 +39,4 @@ class route{
             $i = $i + 2;
         }
     }
-
-
 }

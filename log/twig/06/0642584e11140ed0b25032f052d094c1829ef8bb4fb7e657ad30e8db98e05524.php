@@ -40,7 +40,7 @@ class __TwigTemplate_aaddcf15c862dd4679ea70652a8ce5491ec58625bf52fc84d6a6ab1ba1b
             // line 7
             echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "student_id", array()), "html", null, true);
             echo "</h1>
-        <p>";
+        <p class=\"test-css\">";
             // line 8
             echo twig_escape_filter($this->env, $this->getAttribute($context["val"], "partyname", array()), "html", null, true);
             echo "</p>
@@ -96,7 +96,7 @@ class __TwigTemplate_aaddcf15c862dd4679ea70652a8ce5491ec58625bf52fc84d6a6ab1ba1b
     {% for val in data%}
     <li class=\"am-u-sm-3\">
         <h1>{{ val.student_id }}</h1>
-        <p>{{ val.partyname }}</p>
+        <p class=\"test-css\">{{ val.partyname }}</p>
         <p><span>{{ val.data }}</span></p>
         <a class=\"\" href=\"/index/info/id/{{ val.id }}\">详细信息</a>
     </li>

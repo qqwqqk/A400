@@ -1,0 +1,26 @@
+.user-table{width: 400px; height: 200px; padding: 20px;border: 1px solid darkgray; margin: 10px auto;}
+.user-div{width: 240px; height: 80px;padding: 6px;margin: 10px auto;text-align: center;}
+.user-id-show{width: 80px; background-color: #ffffff; color: black; border: none;}
+.stream-show{height: 80px; width: 240px; color: gray; overflow:hidden; resize:none; border: none;}
+.user-submit{width: 120px;height: 24px;padding: 2px;margin-right: 24px;background-color: azure;}
+/* 介绍信框架 */
+.add-table{width: 640px; padding: 20px; border: 1px solid darkgray; margin: 10px auto;}
+.letter-two{width: 600px; height: 400px; border: 1px solid black; margin: auto;}
+.letter-content{width: 548px; height:400px; border: 1px solid black;float: left;}
+.letter-content-right{width: 48px; height: 400px; text-align:center; line-height: 80px; border: 1px solid black; float: right;}
+/* 介绍信内容 */
+.number-id{ margin-right: 20px; float:right;}
+.text-content{text-indent:2em;line-height: 30px;}
+.data-content{height: 24px; text-align: center; line-height: 30px; margin-right: 20px; float:right;}
+.top-content{margin-left: 5px;float: left;}
+.input-content{ width:148px; text-align: center; border: none;border-bottom: 1px solid black; outline: none;}
+.input-content-short{width: 100px; text-align: center; border: none;border-bottom: 1px solid black; outline: none;}
+.input-content-long{width: 256px; text-align: center; border: none;border-bottom: 1px solid black; outline: none;}
+.select-content{text-align: center; width: 48px; border: none; border-bottom: 1px solid black; outline: none;}
+.select-contents{text-align: center; width: 60px; border: none; border-bottom: 1px solid black; outline: none;}
+.select-content-long{text-align: center; width: 150px; border: none; border-bottom: 1px solid black; outline: none;}
+.input-content-text{width: 32px; text-align: center; border: none;border-bottom: 1px solid black; outline: none; margin: auto;}
+.input-content-texts{width: 48px; text-align: center; border: none;border-bottom: 1px solid black; outline: none; margin: auto;}
+.input-content-year{width: 32px; text-align: center; border: none; outline: none;}
+.input-content-data{width: 16px; text-align: center; border: none; outline: none;}
+.const-receipt{ color:gray; text-align: center;}

@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block content %}
+<script src="/app/views/script/user_save.js" type="text/javascript"></script>
+<link href="/app/views/style/user.css" rel="stylesheet" type="text/css"/>
+
+<form action="/user/save" method="POST" class="form">
+    <fieldset class="add-table">
+        <legend>
+            <input type="radio"  value="1" id="fields_1" name="fields" onchange="fieldChange()"/><label>市内</label>
+            <input type="radio"  value="0" id="fields_0" name="fields" onchange="fieldChange()"/><label>市外</label>
+        </legend>
+        <div>
+            <input type="hidden" id="field" value="{{info.field}}" name="field" />
+            <input type="hidden" id="sex" value="{{info.sex}}" name="sex" />
+            <input type="hidden" id="formal"  value="{{info.formal}}" name="formal" />
+            <input type="hidden" id="college"  value="{{info.college}}" name="college" />
+            <input type="hidden" id="nationality"  value="{{info.nationality}}" name="nationality" />
+            <input type="hidden" id="year"  value="{{info.date_y}}" name="year" />
+            <input type="hidden" id="month"  value="{{info.date_m}}" name="month" />
+        </div>
+        <div class="letter-two">
+            <div class="letter-content">
+                <p class="number-id">第{{ info.student_id }}号<input type="hidden" name="user_id" value="{{info.student_id}}"/></p><br/><br/>
+                <p class="top-content"><input type="text" name="superior" class="input-content-long" placeholder="请输入转入党委名称" value="{{info.superior}}"></p><br/><br/>
+                <p class="text-content">
+                    <input type="text" name="partyname" class="input-content-short" placeholder="请输入姓名" value="{{info.partyname}}">同志
+                    <select id="sexes" name="sexes" class="select-content"><option value="1" selected="selected">男</option><option value="0">女</option></select>，
+                    <input type="text" name="age" class="input-content-text" value="{{info.age}}">岁，
+                    <select id="nationalities" class="select-content" name="nationalities"></select>族，系中共
+                    <select id="formals" name="formals" class="select-contents"><option value="1" selected="selected">正式</option><option value="0">预备</option></select>党员，
+                    身份证号<input type="text" name="card_id" class="input-content" placeholder="请输入身份证号" value="{{info.card_id}}">，
+                    由<input type="text" name="school" class="input-content-short" value="上海大学" readonly>
+                    去<input type="text" name="base" id="base" class="input-content" placeholder="请输入基层党委名称" value="{{info.base}}">，请接转组织关系，
+                    该同志党费已交到<select id="years" name="years" class="select-contents"></select>年<select id="months" name="months" class="select-content"></select>月
+                    （有效期<input type="text" id="data-d" name="data-d" class="input-content-text" value="{{info.date_d}}" readonly>天）
+                </p>
+                <p class="data-content">（盖章)<br/>
+                    <input type="text" name="data-y2" class="input-content-year" value="{{info.current_date_y}}" readonly>年
+                    <input type="text" name="data-m2" class="input-content-data" value="{{info.current_date_m}}" readonly>月
+                    <input type="text" name="data-d2" class="input-content-data" value="{{info.current_date_d}}" readonly>日
+                </p><br/><br/><br/><br/><br/>
+
+                <div>&nbsp;&nbsp;党员联系电话或其它联系方式：<input type="text" name="telephone" class="input-content" placeholder="请输入联系电话" value="{{info.telephone}}"></div>
+                <div>&nbsp;&nbsp;党员原所在基层党委通讯地址：<select id="colleges" name="colleges" class="select-content-long"></select></div>
+                <div><br/>&nbsp;
+                    联系电话：<span class="const-receipt">021-66132343</span>&nbsp;&nbsp;&nbsp;
+                    传真：<span class="const-receipt">021-66133796</span>&nbsp;&nbsp;&nbsp;
+                    邮编：<span class="const-receipt">200444</span>
+                </div>
+            </div>
+            <div class="letter-content-right"><br/>第<br/>二<br/>联<br/></div>
+        </div>
+        <div class="login-div">
+            <button type="submit" class="login-submit">保存</button>
+            <a class="" href="/show/show/id/{{info.student_id}}" target="_blank">预览</a>
+        </div>
+    </fieldset>
+</form>
+
+
+
+
+{% endblock %}

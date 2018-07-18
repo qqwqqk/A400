@@ -20,29 +20,28 @@ class __TwigTemplate_00c56c4124b1c1ec8a439a371b8746ee6c525d3f346f1ad761ebe7908aa
         echo "<!DOCTYPE html>
 <html lang=\"en\">
 <head>
-    <meta charset=\"UTF-8\">
+    <meta http-equiv=\"Content-Type\" content=\"text/html; charset = UTF-8\">
     <title>YGBA400</title>
+    <link href=\"/app/views/style/style.css\" rel=\"stylesheet\" type=\"text/css\"/>
 </head>
 <body>
-<header>
-    <a class=\"am-btn-default\" href=\"/\">所有信息</a>
-    <a class=\"am-btn-default\" href=\"/index/add\">添加信息</a>
-</header>
+<header class=\"header-css\"></header>
+<!-- 代码注释 -->
 <content>
     ";
-        // line 13
+        // line 12
         $this->displayBlock('content', $context, $blocks);
-        // line 16
+        // line 15
         echo "</content>
 <footer>footer</footer>
 </body>
 </html>";
     }
 
-    // line 13
+    // line 12
     public function block_content($context, array $blocks = array())
     {
-        // line 14
+        // line 13
         echo "
     ";
     }
@@ -54,7 +53,7 @@ class __TwigTemplate_00c56c4124b1c1ec8a439a371b8746ee6c525d3f346f1ad761ebe7908aa
 
     public function getDebugInfo()
     {
-        return array (  46 => 14,  43 => 13,  36 => 16,  34 => 13,  20 => 1,);
+        return array (  45 => 13,  42 => 12,  35 => 15,  33 => 12,  20 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -70,14 +69,13 @@ class __TwigTemplate_00c56c4124b1c1ec8a439a371b8746ee6c525d3f346f1ad761ebe7908aa
         return new Twig_Source("<!DOCTYPE html>
 <html lang=\"en\">
 <head>
-    <meta charset=\"UTF-8\">
+    <meta http-equiv=\"Content-Type\" content=\"text/html; charset = UTF-8\">
     <title>YGBA400</title>
+    <link href=\"/app/views/style/style.css\" rel=\"stylesheet\" type=\"text/css\"/>
 </head>
 <body>
-<header>
-    <a class=\"am-btn-default\" href=\"/\">所有信息</a>
-    <a class=\"am-btn-default\" href=\"/index/add\">添加信息</a>
-</header>
+<header class=\"header-css\"></header>
+<!-- 代码注释 -->
 <content>
     {% block content %}
 
