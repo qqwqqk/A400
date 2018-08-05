@@ -33,7 +33,7 @@ class __TwigTemplate_00c56c4124b1c1ec8a439a371b8746ee6c525d3f346f1ad761ebe7908aa
         $this->displayBlock('content', $context, $blocks);
         // line 15
         echo "</content>
-<footer>footer</footer>
+<footer></footer>
 </body>
 </html>";
     }
@@ -81,7 +81,7 @@ class __TwigTemplate_00c56c4124b1c1ec8a439a371b8746ee6c525d3f346f1ad761ebe7908aa
 
     {% endblock %}
 </content>
-<footer>footer</footer>
+<footer></footer>
 </body>
 </html>", "layout.html", "E:\\qqwqqk\\GitHub\\A400\\app\\views\\layout.html");
     }

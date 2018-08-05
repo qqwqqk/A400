@@ -66,63 +66,67 @@ class __TwigTemplate_8aa5c4029e6baf2a5c38c1e438c760075141b11eaed36253eb98e0535e5
         // line 19
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["info"]) ? $context["info"] : null), "date_m", array()), "html", null, true);
         echo "\" name=\"month\" />
+            <input type=\"hidden\" id=\"handle\"  value=\"";
+        // line 20
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["info"]) ? $context["info"] : null), "handle", array()), "html", null, true);
+        echo "\" name=\"handle\" />
         </div>
         <div class=\"letter-two\">
             <div class=\"letter-content\">
                 <p class=\"number-id\">第";
-        // line 23
+        // line 24
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["info"]) ? $context["info"] : null), "student_id", array()), "html", null, true);
         echo "号<input type=\"hidden\" name=\"user_id\" value=\"";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["info"]) ? $context["info"] : null), "student_id", array()), "html", null, true);
         echo "\"/></p><br/><br/>
                 <p class=\"top-content\"><input type=\"text\" name=\"superior\" class=\"input-content-long\" placeholder=\"请输入转入党委名称\" value=\"";
-        // line 24
+        // line 25
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["info"]) ? $context["info"] : null), "superior", array()), "html", null, true);
         echo "\"></p><br/><br/>
                 <p class=\"text-content\">
                     <input type=\"text\" name=\"partyname\" class=\"input-content-short\" placeholder=\"请输入姓名\" value=\"";
-        // line 26
+        // line 27
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["info"]) ? $context["info"] : null), "partyname", array()), "html", null, true);
         echo "\">同志
                     <select id=\"sexes\" name=\"sexes\" class=\"select-content\"><option value=\"1\" selected=\"selected\">男</option><option value=\"0\">女</option></select>，
                     <input type=\"text\" name=\"age\" class=\"input-content-text\" value=\"";
-        // line 28
+        // line 29
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["info"]) ? $context["info"] : null), "age", array()), "html", null, true);
         echo "\">岁，
                     <select id=\"nationalities\" class=\"select-content\" name=\"nationalities\"></select>族，系中共
                     <select id=\"formals\" name=\"formals\" class=\"select-contents\"><option value=\"1\" selected=\"selected\">正式</option><option value=\"0\">预备</option></select>党员，
                     身份证号<input type=\"text\" name=\"card_id\" class=\"input-content\" placeholder=\"请输入身份证号\" value=\"";
-        // line 31
+        // line 32
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["info"]) ? $context["info"] : null), "card_id", array()), "html", null, true);
         echo "\">，
                     由<input type=\"text\" name=\"school\" class=\"input-content-short\" value=\"上海大学\" readonly>
                     去<input type=\"text\" name=\"base\" id=\"base\" class=\"input-content\" placeholder=\"请输入基层党委名称\" value=\"";
-        // line 33
+        // line 34
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["info"]) ? $context["info"] : null), "base", array()), "html", null, true);
         echo "\">，请接转组织关系，
                     该同志党费已交到<select id=\"years\" name=\"years\" class=\"select-contents\"></select>年<select id=\"months\" name=\"months\" class=\"select-content\"></select>月
                     （有效期<input type=\"text\" id=\"data-d\" name=\"data-d\" class=\"input-content-text\" value=\"";
-        // line 35
+        // line 36
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["info"]) ? $context["info"] : null), "date_d", array()), "html", null, true);
         echo "\" readonly>天）
                 </p>
                 <p class=\"data-content\">（盖章)<br/>
                     <input type=\"text\" name=\"data-y2\" class=\"input-content-year\" value=\"";
-        // line 38
+        // line 39
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["info"]) ? $context["info"] : null), "current_date_y", array()), "html", null, true);
         echo "\" readonly>年
                     <input type=\"text\" name=\"data-m2\" class=\"input-content-data\" value=\"";
-        // line 39
+        // line 40
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["info"]) ? $context["info"] : null), "current_date_m", array()), "html", null, true);
         echo "\" readonly>月
                     <input type=\"text\" name=\"data-d2\" class=\"input-content-data\" value=\"";
-        // line 40
+        // line 41
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["info"]) ? $context["info"] : null), "current_date_d", array()), "html", null, true);
         echo "\" readonly>日
                 </p><br/><br/><br/><br/><br/>
 
                 <div>&nbsp;&nbsp;党员联系电话或其它联系方式：<input type=\"text\" name=\"telephone\" class=\"input-content\" placeholder=\"请输入联系电话\" value=\"";
-        // line 43
+        // line 44
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["info"]) ? $context["info"] : null), "telephone", array()), "html", null, true);
         echo "\"></div>
                 <div>&nbsp;&nbsp;党员原所在基层党委通讯地址：<select id=\"colleges\" name=\"colleges\" class=\"select-content-long\"></select></div>
@@ -134,12 +138,8 @@ class __TwigTemplate_8aa5c4029e6baf2a5c38c1e438c760075141b11eaed36253eb98e0535e5
             </div>
             <div class=\"letter-content-right\"><br/>第<br/>二<br/>联<br/></div>
         </div>
-        <div class=\"login-div\">
-            <button type=\"submit\" class=\"login-submit\">保存</button>
-            <a class=\"\" href=\"/show/show/id/";
-        // line 55
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["info"]) ? $context["info"] : null), "student_id", array()), "html", null, true);
-        echo "\" target=\"_blank\">预览</a>
+        <div class=\"user-submit-div\">
+            <button type=\"submit\" class=\"user-submit\">提交申请</button>
         </div>
     </fieldset>
 </form>
@@ -162,7 +162,7 @@ class __TwigTemplate_8aa5c4029e6baf2a5c38c1e438c760075141b11eaed36253eb98e0535e5
 
     public function getDebugInfo()
     {
-        return array (  141 => 55,  126 => 43,  120 => 40,  116 => 39,  112 => 38,  106 => 35,  101 => 33,  96 => 31,  90 => 28,  85 => 26,  80 => 24,  74 => 23,  67 => 19,  63 => 18,  59 => 17,  55 => 16,  51 => 15,  47 => 14,  43 => 13,  31 => 3,  28 => 2,  11 => 1,);
+        return array (  130 => 44,  124 => 41,  120 => 40,  116 => 39,  110 => 36,  105 => 34,  100 => 32,  94 => 29,  89 => 27,  84 => 25,  78 => 24,  71 => 20,  67 => 19,  63 => 18,  59 => 17,  55 => 16,  51 => 15,  47 => 14,  43 => 13,  31 => 3,  28 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -194,6 +194,7 @@ class __TwigTemplate_8aa5c4029e6baf2a5c38c1e438c760075141b11eaed36253eb98e0535e5
             <input type=\"hidden\" id=\"nationality\"  value=\"{{info.nationality}}\" name=\"nationality\" />
             <input type=\"hidden\" id=\"year\"  value=\"{{info.date_y}}\" name=\"year\" />
             <input type=\"hidden\" id=\"month\"  value=\"{{info.date_m}}\" name=\"month\" />
+            <input type=\"hidden\" id=\"handle\"  value=\"{{info.handle}}\" name=\"handle\" />
         </div>
         <div class=\"letter-two\">
             <div class=\"letter-content\">
@@ -227,9 +228,8 @@ class __TwigTemplate_8aa5c4029e6baf2a5c38c1e438c760075141b11eaed36253eb98e0535e5
             </div>
             <div class=\"letter-content-right\"><br/>第<br/>二<br/>联<br/></div>
         </div>
-        <div class=\"login-div\">
-            <button type=\"submit\" class=\"login-submit\">保存</button>
-            <a class=\"\" href=\"/show/show/id/{{info.student_id}}\" target=\"_blank\">预览</a>
+        <div class=\"user-submit-div\">
+            <button type=\"submit\" class=\"user-submit\">提交申请</button>
         </div>
     </fieldset>
 </form>

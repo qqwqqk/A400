@@ -17,6 +17,7 @@
             <input type="hidden" id="nationality"  value="{{info.nationality}}" name="nationality" />
             <input type="hidden" id="year"  value="{{info.date_y}}" name="year" />
             <input type="hidden" id="month"  value="{{info.date_m}}" name="month" />
+            <input type="hidden" id="handle"  value="{{info.handle}}" name="handle" />
         </div>
         <div class="letter-two">
             <div class="letter-content">
@@ -50,9 +51,8 @@
             </div>
             <div class="letter-content-right"><br/>第<br/>二<br/>联<br/></div>
         </div>
-        <div class="login-div">
-            <button type="submit" class="login-submit">保存</button>
-            <a class="" href="/show/show/id/{{info.student_id}}" target="_blank">预览</a>
+        <div class="user-submit-div">
+            <button type="submit" class="user-submit">提交申请</button>
         </div>
     </fieldset>
 </form>

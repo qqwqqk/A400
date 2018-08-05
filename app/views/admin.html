@@ -1,17 +1,44 @@
 {% extends "layout.html" %}
 {% block content %}
-<h1> admin </h1>
-<input type="hidden" name="id" value="0">
-<table>
-    {% for val in info %}
-    <tr>
-        <td>学号：{{ val.student_id }}</td>
-        <td>姓名：{{ val.partyname }}</td>
-        <td>状态码：{{ val.stream }}</td>
-        <td>日期：{{ val.data }}</td>
-        <td><a class="" href="/show/show/id/{{val.student_id}}" target="_blank">预览</a></td>
-    </tr>
-    {% endfor %}
-</table>
+<script src="/app/views/script/admin.js" type="text/javascript"></script>
+<link href="/app/views/style/admin.css" rel="stylesheet" type="text/css"/>
+
+<form action="/admin/admin" method="POST" class="form">
+    <fieldset class="admin-div">
+        <legend>{{admin.id}}您好！ <input type="hidden" name="id" value={{admin.id}}></legend>
+        <div class="admin-left">
+            <label>学号：</label><input id="student_id" name="student_id" placeholder="请输入学号" class=""/><br/><br/>
+            <label>申请状态：</label>
+            <select id="fulfils" name="fulfil">
+                <option value="0">未申请</option>
+                <option value="1">申请中</option>
+                <option value="2">待领取</option>
+                <option value="3">待回执</option>
+                <option value="4">待网转</option>
+                <option value="5">已完成</option>
+            </select><br/><br/>
+            <button class="admin-button">查询</button>
+        </div>
+        <div class="admin-right">
+            <a href="/admin/admin/id/{{admin.id}}">信息处理</a>
+            <a href="/admin/passwd/id/{{admin.id}}">信息修改</a>
+        </div>
+    </fieldset>
+
+    <input type="hidden" id="fulfil" value="{{ admin.fulfil }}"/>
+
+    <table class="admin-table" id="table">
+        <tr id="tr" class="admin-table-top"></tr>
+        {% for val in info %}
+        <tr id="trs" class="admin-table-tr">
+            <td class="admin-table-td">{{ val.student_id }}</td>
+            <td class="admin-table-td">{{ val.partyname }}</td>
+            <td class="admin-table-td"><a class="" href="/show/show/id/{{val.student_id}}" target="_blank">预览</a></td>
+            <td class="admin-table-td">{{ val.time_apply }}</td>
+            <td class="admin-table-td"><a class="" id="handle_{{val.student_id}}" name="handles" href="/admin/handle/id/{{val.student_id}}/fulfil/{{val.fulfil}}">办理</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</form>
 
 {% endblock %}
